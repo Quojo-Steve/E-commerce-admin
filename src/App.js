@@ -2,23 +2,24 @@ import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
-  Link,
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-
 import Login from "./Pages/Login";
-
 import Page404 from "./Pages/Page404";
+import Dashboard from "./Pages/Dashboard";
+import Items from "./Pages/Items";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        
-
         <Route index element={<Login />} />
         <Route path="*" element={<Page404 />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="newitems" element={<Items />} />
       </Route>
     )
   );
@@ -26,17 +27,24 @@ function App() {
   return (
     <div className="">
       <RouterProvider router={router} />
+      <ToastContainer />
     </div>
   );
 }
 
 const Root = () => {
+  // const location = useLocation();
+
+  // const showSidebarPaths = ["/dashboard", "/name"];
   return (
     <>
-      {/* <div>
-        <Link to="/" className="text-blue-700">Welcome</Link>
-        <Link to="/name" className="text-blue-700">Name</Link>
-      </div> */}
+      {/* {showSidebarPaths.includes(location.pathname) && (
+        <div className="flex">
+          <div className={`w-72 h-screen bg-green-500 `}>
+            Sidebar
+          </div>
+        </div>
+      )} */}
 
       <div>
         <Outlet />

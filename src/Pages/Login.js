@@ -4,10 +4,19 @@ import React from "react";
 import avatar from "../images/avatar.svg";
 import wave from "../images/wave.png";
 import bg from "../images/bg.svg";
+import { BsLockFill } from "react-icons/bs";
+import {HiUserCircle} from "react-icons/hi"
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./Login.css";
 
 const Login = () => {
+  const notify = () => {
+    toast.success('JEssica', {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
   // const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
   // const [err, seterr] = useState("");
@@ -70,35 +79,35 @@ const Login = () => {
 
   return (
     <div className="body">
-      <img class="wave" src={wave} alt=""/>
-      <div class="container">
-        <div class="img">
+      <img className="wave" src={wave} alt=""/>
+      <div className="container1">
+        <div className="img">
           <img src={bg} alt=""/>
         </div>
-        <div class="login-content">
-          <form action="index.html">
+        <div className="login-content">
+          <form className="form" >
             <img src={avatar} alt=""/>
-            <h2 class="title">Welcome</h2>
-            <div class="input-div one">
-              <div class="i">
-                <i class="fas fa-user"></i>
+            <h2 className="title">Welcome</h2>
+            <div className="input-div one">
+              <div className="i">
+                <HiUserCircle className="icons font-bold text-black text-5xl"/>
               </div>
-              <div class="div">
+              <div className="div">
                 <h5>Username</h5>
-                <input type="text" class="input" />
+                <input type="text" className="input" />
               </div>
             </div>
-            <div class="input-div pass">
-              <div class="i">
-                <i class="fas fa-lock"></i>
+            <div className="input-div pass">
+              <div className="i">
+                <BsLockFill className="icons font-bold text-black text-5xl"/>
               </div>
-              <div class="div">
+              <div className="div">
                 <h5>Password</h5>
-                <input type="password" class="input" />
+                <input type="password" className="input" />
               </div>
             </div>
-            <a href="p">Forgot Password?</a>
-            <input type="submit" class="btn" value="Login" />
+            <a className="forgot" href="/" >Forgot Password?</a>
+            <input type="submit" className="btn" value="Login" onClick={notify} />
           </form>
         </div>
       </div>
