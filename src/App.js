@@ -9,6 +9,7 @@ import Login from "./Pages/Login";
 import Page404 from "./Pages/Page404";
 import Dashboard from "./Pages/Dashboard";
 import Items from "./Pages/Items";
+import Customers from "./Pages/Customers"
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="*" element={<Page404 />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="newitems" element={<Items />} />
+        <Route path="customers" element={<Customers />} />
       </Route>
     )
   );

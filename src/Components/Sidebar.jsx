@@ -87,7 +87,7 @@ const Sidebar = () => {
               </span>
             </Link>
             <Link
-              to={"/"}
+              to={"/customers"}
               className={`text-gray-800 ${!open ? 'flex-col' : 'flex-row'} font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
               <HiOutlineUsers size={20} />

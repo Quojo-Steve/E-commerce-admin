@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar";
-// import { Pie } from "react-chartjs-2";
 import Headers from "../Components/Headers";
 import Stats from "../Components/Stats";
 import TransactionCharts from "../Components/TransactionCharts";
@@ -12,7 +11,7 @@ import PopularProducts from "../Components/PopularProducts";
 const Dashboard = () => {
   return (
     <div className="">
-      <div className="flex bg-gray-100 overflow-hidden h-screen w-screen  flex-row ">
+      <div className="flex bg-gray-100 overflow-hidden h-screen w-screen flex-row ">
         <Sidebar />
         <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
           <Headers />
