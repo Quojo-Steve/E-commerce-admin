@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useState,useEffect } from "react";
 import {
   HiOutlineSearch,
   HiOutlineChatAlt,
@@ -6,21 +6,35 @@ import {
 } from "react-icons/hi";
 import { Popover, Transition, Menu } from "@headlessui/react";
 import bg from "../images/bg.jpg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Headers = () => {
+  const [customer, setCustomer] = useState(false);
+  const [product, setProduct] = useState(false);
+
+  const location = useLocation();
   const navigate = useNavigate();
+  useEffect(() => {
+    if (location.pathname === "/customers") {
+      setCustomer(true);
+    }
+  }, [location.pathname]);
+  useEffect(() => {
+    if (location.pathname === "/products") {
+      setProduct(true);
+    }
+  }, [location.pathname]);
   return (
     <div className="bg-white h-16 px-4 flex justify-between items-center border-b border-gray-200">
-      <div className="relative">
+      <div className={`relative`}>
         <HiOutlineSearch
           fontSize={20}
-          className="text-gray-400 absolute top-1/2 -translate-y-1/2 left-3"
+          className={`text-gray-400 absolute top-1/2 -translate-y-1/2 left-3 ${customer ? "hidden":"block"}  ${product ? "hidden":"block"}`}
         />
         <input
           type="text"
           placeholder="Search..."
-          className="text-sm focus:outline-none active:outline-none h-10 w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4"
+          className={`text-sm focus:outline-none active:outline-none h-10 w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4 ${customer ? "hidden":"block"}`}
         />
       </div>
       <div className="flex items-center gap-2 mr-2">

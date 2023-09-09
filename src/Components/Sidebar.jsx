@@ -10,6 +10,7 @@ const Sidebar = () => {
   const [open, setOpen] = useState(false);
   const [dashboard, setDashboard] = useState(false);
   const [item, setItem] = useState(false);
+  const [customer, setCustomer] = useState(false);
 
 
   const location = useLocation();
@@ -21,8 +22,14 @@ const Sidebar = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.pathname === "/newitems") {
+    if (location.pathname === "/products") {
       setItem(true);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/customers") {
+      setCustomer(true);
     }
   }, [location.pathname]);
 
@@ -69,7 +76,7 @@ const Sidebar = () => {
               </span>
             </Link>
             <Link
-              to={"/newitems"}
+              to={"/products"}
               className={`${item ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
             >
               <HiOutlineCube size={20} />
@@ -88,7 +95,7 @@ const Sidebar = () => {
             </Link>
             <Link
               to={"/customers"}
-              className={`text-gray-800 ${!open ? 'flex-col' : 'flex-row'} font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
+              className={`${customer ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
             >
               <HiOutlineUsers size={20} />
               <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>

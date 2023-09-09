@@ -1,12 +1,13 @@
+import React from "react";
+import Sidebar from "../Components/Sidebar";
+import Headers from "../Components/Headers";
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../theme";
 import { mockDataContacts } from "../data/mockData";
 import { useTheme } from "@mui/material";
-import Headers from "../Components/Headers";
-import Sidebar from "../Components/Sidebar";
 
-const Contacts = () => {
+const Products = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -53,6 +54,10 @@ const Contacts = () => {
       <Sidebar />
       <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
         <Headers />
+        <div className="flex items-center p-2">
+        <h1>Products</h1>
+        <button className="bg-green-300 p-1 px-4 hover:bg-green-200 duration-150 rounded ml-4 font-medium text-sm">Add Product</button>
+        </div>
         <Box
           height="75vh"
           sx={{
@@ -103,7 +108,7 @@ const Contacts = () => {
         </Box>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contacts;
+export default Products

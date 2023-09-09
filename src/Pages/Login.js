@@ -12,7 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 
 const Login = () => {
-  const notify = () => {
+  const notify = (e) => {
+    e.preventDefault();
+    
     toast.success('JEssica', {
       position: toast.POSITION.TOP_RIGHT,
     });
