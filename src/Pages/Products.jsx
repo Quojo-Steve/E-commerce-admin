@@ -1,31 +1,33 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Sidebar from "../Components/Sidebar";
 import Headers from "../Components/Headers";
 import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../theme";
-import { mockDataContacts } from "../data/mockData";
+import { mockDataInvoices } from "../data/mockData";
 import { useTheme } from "@mui/material";
+import AddProducts from "../Components/AddProducts";
 
 const Products = () => {
+  const [addProduct, setAddProduct] = useState(false);
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  useEffect(()=>{
+    setAddProduct(false);
+  },[]);
+
+  const show = () =>{
+    setAddProduct(true)
+  }
+
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
     {
       field: "name",
       headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
-    },
-    {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
     },
     {
       field: "phone",
@@ -38,13 +40,8 @@ const Products = () => {
       flex: 1,
     },
     {
-      field: "address",
-      headerName: "Address",
-      flex: 1,
-    },
-    {
-      field: "city",
-      headerName: "City",
+      field: "date",
+      headerName: "Date",
       flex: 1,
     },
   ];
@@ -55,8 +52,13 @@ const Products = () => {
       <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
         <Headers />
         <div className="flex items-center p-2">
-        <h1>Products</h1>
-        <button className="bg-green-300 p-1 px-4 hover:bg-green-200 duration-150 rounded ml-4 font-medium text-sm">Add Product</button>
+          <h1 className="uppercase text-3xl text-slate-500">Products</h1>
+          <button
+            className="bg-green-300 p-1 px-4 hover:bg-green-200 duration-150 rounded ml-4 font-medium text-sm"
+            onClick={show}
+          >
+            Add Product
+          </button>
         </div>
         <Box
           height="75vh"
@@ -91,9 +93,9 @@ const Products = () => {
           }}
         >
           <DataGrid
-            rows={mockDataContacts}
+            rows={mockDataInvoices}
             columns={columns}
-            components={{ Toolbar: GridToolbar }}
+            slots={{ Toolbar: GridToolbar }}
             slotProps={{
               toolbar: {
                 showQuickFilter: true,
@@ -107,8 +109,9 @@ const Products = () => {
           />
         </Box>
       </div>
+      <AddProducts prop={addProduct} />
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

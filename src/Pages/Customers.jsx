@@ -11,20 +11,13 @@ const Contacts = () => {
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar ID" },
+    // { field: "id", headerName: "ID", flex: 0.5 },
+    { field: "customerId", headerName: "Customer ID" },
     {
       field: "name",
       headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
-    },
-    {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
     },
     {
       field: "phone",
@@ -53,6 +46,9 @@ const Contacts = () => {
       <Sidebar />
       <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
         <Headers />
+        <div className="flex items-center p-2">
+        <h1 className="uppercase text-3xl text-slate-500">Customers</h1>
+        </div>
         <Box
           height="75vh"
           sx={{
@@ -88,7 +84,7 @@ const Contacts = () => {
           <DataGrid
             rows={mockDataContacts}
             columns={columns}
-            components={{ Toolbar: GridToolbar }}
+            slots={{ Toolbar: GridToolbar }}
             slotProps={{
               toolbar: {
                 showQuickFilter: true,

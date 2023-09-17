@@ -12,6 +12,7 @@ import Products from "./Pages/Products";
 import Customers from "./Pages/Customers"
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Orders from "./Pages/Orders";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,6 +23,8 @@ function App() {
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="products" element={<Products />} />
         <Route path="customers" element={<Customers />} />
+        <Route path="orders" element={<Orders />} />
+
       </Route>
     )
   );

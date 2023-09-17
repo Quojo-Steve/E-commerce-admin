@@ -11,6 +11,7 @@ const Sidebar = () => {
   const [dashboard, setDashboard] = useState(false);
   const [item, setItem] = useState(false);
   const [customer, setCustomer] = useState(false);
+  const [orders, setOrders] = useState(false);
 
 
   const location = useLocation();
@@ -30,6 +31,12 @@ const Sidebar = () => {
   useEffect(() => {
     if (location.pathname === "/customers") {
       setCustomer(true);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/orders") {
+      setOrders(true);
     }
   }, [location.pathname]);
 
@@ -85,8 +92,8 @@ const Sidebar = () => {
               </span>
             </Link>
             <Link
-              to={"/"}
-              className={`${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
+              to={"/orders"}
+              className={`${orders ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
               <HiOutlineShoppingCart size={20} />
               <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>

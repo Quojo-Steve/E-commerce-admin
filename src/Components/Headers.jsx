@@ -34,7 +34,7 @@ const Headers = () => {
         <input
           type="text"
           placeholder="Search..."
-          className={`text-sm focus:outline-none active:outline-none h-10 w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4 ${customer ? "hidden":"block"}`}
+          className={`text-sm focus:outline-none active:outline-none h-10 w-[24rem] border border-gray-300 rounded-sm pl-11 pr-4 ${customer ? "hidden":"block"} ${product ? "hidden":"block"}`}
         />
       </div>
       <div className="flex items-center gap-2 mr-2">
