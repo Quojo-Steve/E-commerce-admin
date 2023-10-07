@@ -6,7 +6,10 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../theme";
 import { mockDataInvoices } from "../data/mockData";
 import { useTheme } from "@mui/material";
-import AddProducts from "../Components/AddProducts";
+import "./addproducts.css"
+import {AiOutlineClose} from 'react-icons/ai'
+
+
 
 const Products = () => {
   const [addProduct, setAddProduct] = useState(false);
@@ -19,6 +22,10 @@ const Products = () => {
 
   const show = () =>{
     setAddProduct(true)
+  }
+
+  const close = () =>{
+    setAddProduct(false)
   }
 
   const columns = [
@@ -109,7 +116,14 @@ const Products = () => {
           />
         </Box>
       </div>
-      <AddProducts prop={addProduct} />
+      <div className={`${addProduct ? "back" : "hidden"}`}>
+      <div className="content">
+        <h4>Game Over!</h4>
+        <p>The correct word was: <b>rainbow</b></p>
+        <button className="play-again bg-green-300">Play Again</button>
+      </div>
+      <AiOutlineClose className='text-white text-4xl absolute top-0 right-0 cursor-pointer' onClick={close} />
+    </div>
     </div>
   );
 };

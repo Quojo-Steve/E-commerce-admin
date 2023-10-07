@@ -164,10 +164,10 @@ const Orders = () => {
                 {recentOrderData.map((order) => (
                   <tr key={order.id}>
                     <td>
-                      <Link to={`/order/${order.id}`}>#{order.id}</Link>
+                      {order.id}
                     </td>
                     <td>
-                      <Link to={`/product/${order.product_id}`}>
+                      <Link to={`/order/${order.product_id}`}>
                         #{order.product_id}
                       </Link>
                     </td>

@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { AiOutlineLeft } from "react-icons/ai";
 import {
-  AiOutlineLeft,
-} from "react-icons/ai";
-import { HiViewGrid, HiOutlineCube, HiOutlineShoppingCart, HiOutlineUsers, HiOutlineDocumentText, HiOutlineAnnotation,HiOutlineCog,HiOutlineLogout,HiOutlineQuestionMarkCircle } from "react-icons/hi";
+  HiViewGrid,
+  HiOutlineCube,
+  HiOutlineShoppingCart,
+  HiOutlineUsers,
+  HiOutlineDocumentText,
+  HiOutlineAnnotation,
+  HiCalendar,
+  HiOutlineLogout,
+  HiOutlineQuestionMarkCircle,
+} from "react-icons/hi";
 import logo from "../images/twitter.png";
 
 const Sidebar = () => {
@@ -12,10 +20,11 @@ const Sidebar = () => {
   const [item, setItem] = useState(false);
   const [customer, setCustomer] = useState(false);
   const [orders, setOrders] = useState(false);
-
+  const [calendar, setCalendar] = useState(false);
+  const [faq, setFaq] = useState(false);
 
   const location = useLocation();
-  
+
   useEffect(() => {
     if (location.pathname === "/dashboard") {
       setDashboard(true);
@@ -37,6 +46,18 @@ const Sidebar = () => {
   useEffect(() => {
     if (location.pathname === "/orders") {
       setOrders(true);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/calendar") {
+      setCalendar(true);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/faq") {
+      setFaq(true);
     }
   }, [location.pathname]);
 
@@ -75,55 +96,91 @@ const Sidebar = () => {
           <li className="duration-300">
             <Link
               to={"/dashboard"}
-              className={`${dashboard ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md  duration-300 mb-2`}
+              className={`${dashboard ? "bg-gray-50" : "hover:bg-gray-50"} ${
+                !open ? "flex-col" : "flex-row"
+              } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md  duration-300 mb-2`}
             >
               <HiViewGrid size={20} />
-              <span className={`${!open ? 'text-[10px]' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-[10px]" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Dashboard
               </span>
             </Link>
             <Link
               to={"/products"}
-              className={`${item ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
+              className={`${item ? "bg-gray-50" : "hover:bg-gray-50"} ${
+                !open ? "flex-col" : "flex-row"
+              } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
             >
               <HiOutlineCube size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Products
               </span>
             </Link>
             <Link
               to={"/orders"}
-              className={`${orders ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
+              className={`${orders ? "bg-gray-50" : "hover:bg-gray-50"} ${
+                !open ? "flex-col" : "flex-row"
+              } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
               <HiOutlineShoppingCart size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Orders
               </span>
             </Link>
             <Link
               to={"/customers"}
-              className={`${customer ? "bg-gray-50" : "hover:bg-gray-50"} ${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
+              className={`${customer ? "bg-gray-50" : "hover:bg-gray-50"} ${
+                !open ? "flex-col" : "flex-row"
+              } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
             >
               <HiOutlineUsers size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Customers
               </span>
             </Link>
             <Link
               to={"/"}
-              className={`text-gray-800 ${!open ? 'flex-col' : 'flex-row'} font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
+              className={`text-gray-800 ${
+                !open ? "flex-col" : "flex-row"
+              } font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
               <HiOutlineDocumentText size={20} />
-              <span className={`${!open ? 'text-[10px]' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-[10px]" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Transactions
               </span>
             </Link>
             <Link
               to={"/"}
-              className={`text-gray-800 ${!open ? 'flex-col' : 'flex-row'} font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
+              className={`text-gray-800 ${
+                !open ? "flex-col" : "flex-row"
+              } font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
               <HiOutlineAnnotation size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Messages
               </span>
             </Link>
@@ -132,29 +189,47 @@ const Sidebar = () => {
         <ul className="pt-2 flex flex-col gap-0.5 border-t border-neutral-700">
           <li className="duration-300">
             <Link
-              to={"/"}
-              className={`${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-1`}
+              to={"/calendar"}
+              className={`${calendar ? "bg-gray-50" : "hover:bg-gray-50"} ${
+                !open ? "flex-col" : "flex-row"
+              } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
             >
-              <HiOutlineCog size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
-                Settings
+              <HiCalendar size={20} />
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
+                Calendar
               </span>
             </Link>
             <Link
-              to={"/"}
-              className={`${!open ? 'flex-col' : 'flex-row'} text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-1`}
+              to={"/faq"}
+              className={`${faq ? "bg-gray-50" : "hover:bg-gray-50"} ${
+                !open ? "flex-col" : "flex-row"
+              } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md duration-300 mb-2`}
             >
               <HiOutlineQuestionMarkCircle size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
-                Help
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
+                FAQs
               </span>
             </Link>
             <Link
               to={"/"}
-              className={`${!open ? 'flex-col' : 'flex-row'} text-red-500 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300`}
+              className={`${
+                !open ? "flex-col" : "flex-row"
+              } text-red-500 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300`}
             >
               <HiOutlineLogout size={20} />
-              <span className={`${!open ? 'text-xs' : 'text-base'} duration-300 origin-left`}>
+              <span
+                className={`${
+                  !open ? "text-xs" : "text-base"
+                } duration-300 origin-left`}
+              >
                 Logout
               </span>
             </Link>
