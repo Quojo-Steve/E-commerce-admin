@@ -8,7 +8,7 @@ import {
 import Login from "./Pages/Login";
 import Page404 from "./Pages/Page404";
 import Dashboard from "./Pages/Dashboard";
-import Products from "./Pages/Products";
+import Products from "./Pages/products/Products";
 import Customers from "./Pages/Customers"
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,9 +20,9 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        <Route index element={<Login />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<Page404 />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route index element={<Dashboard />} />
         <Route path="products" element={<Products />} />
         <Route path="customers" element={<Customers />} />
         <Route path="orders" element={<Orders />} />

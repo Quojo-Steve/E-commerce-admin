@@ -26,7 +26,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/dashboard") {
+    if (location.pathname === "/") {
       setDashboard(true);
     }
   }, [location.pathname]);
@@ -80,7 +80,7 @@ const Sidebar = () => {
           <img
             src={logo}
             alt=""
-            className={`cursor-pointer duration-500 h-10 w-10 ml-2 ${
+            className={`cursor-pointer duration-500 h-10 w-10 ml-2 -mb-3 ${
               open && "rotate-[360deg]"
             }`}
           />
@@ -95,7 +95,7 @@ const Sidebar = () => {
         <ul className="pt-6 mb-7">
           <li className="duration-300">
             <Link
-              to={"/dashboard"}
+              to={"/"}
               className={`${dashboard ? "bg-gray-50" : "hover:bg-gray-50"} ${
                 !open ? "flex-col" : "flex-row"
               } text-gray-800 font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 rounded-md  duration-300 mb-2`}
