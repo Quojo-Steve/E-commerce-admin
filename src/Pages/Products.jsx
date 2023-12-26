@@ -59,7 +59,7 @@ const Products = () => {
       <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
         <Headers />
         <div className="flex items-center p-2">
-          <h1 className="uppercase text-3xl text-slate-500">Products</h1>
+          <h1 className="uppercase text-3xl text-blue-500">Products</h1>
           <button
             className="bg-green-300 p-1 px-4 hover:bg-green-200 duration-150 rounded ml-4 font-medium text-sm"
             onClick={show}

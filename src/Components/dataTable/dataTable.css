@@ -20,10 +20,10 @@
 
 .dataGrid .action {
   display: flex;
-  gap: 15px;
+  gap: 35px;
 }
 
-.dataGrid .action img {
+.dataGrid .action img , .delete{
   width: 20px;
   height: 20px;
   cursor: pointer;

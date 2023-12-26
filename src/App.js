@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Orders from "./Pages/Orders";
 import Calendar from "./Pages/Calendar";
 import Faq from "./Pages/Faq";
+import Addproduct from "./Pages/Addproduct";
 
 function App() {
   const router = createBrowserRouter(
@@ -24,6 +25,7 @@ function App() {
         <Route path="*" element={<Page404 />} />
         <Route index element={<Dashboard />} />
         <Route path="products" element={<Products />} />
+        <Route path="addproduct" element={<Addproduct />} />
         <Route path="customers" element={<Customers />} />
         <Route path="orders" element={<Orders />} />
         <Route path="calendar" element={<Calendar />} />

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./products.css";
 import DataTable from "../../Components/dataTable/DataTable";
-import Add from "../../Components/add/Add";
 import { products } from "../../data";
 import Headers from "../../Components/Headers";
 import Sidebar from "../../Components/Sidebar";
+import { Link } from "react-router-dom";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -32,12 +32,11 @@ const columns = [
     field: "inStock",
     headerName: "In Stock",
     width: 150,
-    type: "boolean",
+    type: "int",
   },
 ];
 
 const Products = () => {
-  const [open, setOpen] = useState(false);
 
   return (
     <div className="">
@@ -46,12 +45,15 @@ const Products = () => {
         <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
           <Headers />
           <div className="products">
-            <div className="info">
-              <h1>Products</h1>
-              <button onClick={() => setOpen(true)}>Add New Products</button>
+            <div className="flex items-center p-2">
+              <h1 className="uppercase text-3xl text-slate-500">Products</h1>
+              <Link to={"/addproduct"}
+                className="bg-green-300 p-1 px-4 hover:bg-green-200 text-black duration-150 rounded ml-4 font-medium text-sm"
+              >
+                Add Product
+              </Link>
             </div>
             <DataTable slug="products" columns={columns} rows={products} />
-            {open && <Add slug="product" columns={columns} setOpen={setOpen} />}
           </div>
         </div>
       </div>

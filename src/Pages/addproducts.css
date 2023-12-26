@@ -1,44 +1,91 @@
-.back{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    padding: 0px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.6);
+:root {
+	--blue: #0071FF;
+	--light-blue: #B6DBF6;
+	--dark-blue: #005DD1;
+	--grey: #f2f2f2;
 }
-
-.back .content{
-    background: #fff;
-    max-width: 420px;
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    padding: 30px;
+/* body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--light-blue);
+} */
+.container2 {
+	/* max-width: 90%; */
+	width: 100%;
+	/* background: #e60808; */
+	/* padding: 30px; */
+	/* border-radius: 30px; */
 }
-.back h4{
-    font-size: 1.53rem;
+.img-area {
+	position: relative;
+	width: 60%;
+	height: 280px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-.back p{
-    font-size: 1.15rem;
-    margin: 15px 0 30px;
-    font-weight: 500;
+.img-area .icon {
+	font-size: 100px;
 }
-.back p b{
-    font-weight: 600;
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
 }
-.back button{
-    padding: 12px 23px;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
+.img-area p {
+	color: #999;
+}
+.img-area p span {
+	font-weight: 600;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+}
+.select-image {
+	display: block;
+	padding: 10px 0;
+	border-radius: 15px;
+	color: #000;
+    letter-spacing: 2px;
+	font-weight: 800;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
 }

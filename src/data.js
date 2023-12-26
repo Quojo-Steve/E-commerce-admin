@@ -219,95 +219,7 @@ export const chartBoxRevenue = {
     { name: "Sat", revenue: 450 },
   ],
 };
-export const chartBoxConversion = {
-  color: "gold",
-  icon: "/conversionIcon.svg",
-  title: "Total Ratio",
-  number: "2.6",
-  dataKey: "ratio",
-  percentage: 12,
-  chartData: [
-    { name: "Sun", ratio: 400 },
-    { name: "Mon", ratio: 600 },
-    { name: "Tue", ratio: 500 },
-    { name: "Wed", ratio: 700 },
-    { name: "Thu", ratio: 400 },
-    { name: "Fri", ratio: 500 },
-    { name: "Sat", ratio: 450 },
-  ],
-};
 
-export const barChartBoxRevenue = {
-  title: "Profit Earned",
-  color: "#8884d8",
-  dataKey: "profit",
-  chartData: [
-    {
-      name: "Sun",
-      profit: 4000,
-    },
-    {
-      name: "Mon",
-      profit: 3000,
-    },
-    {
-      name: "Tue",
-      profit: 2000,
-    },
-    {
-      name: "Wed",
-      profit: 2780,
-    },
-    {
-      name: "Thu",
-      profit: 1890,
-    },
-    {
-      name: "Fri",
-      profit: 2390,
-    },
-    {
-      name: "Sat",
-      profit: 3490,
-    },
-  ],
-};
-
-export const barChartBoxVisit = {
-  title: "Total Visit",
-  color: "#FF8042",
-  dataKey: "visit",
-  chartData: [
-    {
-      name: "Sun",
-      visit: 4000,
-    },
-    {
-      name: "Mon",
-      visit: 3000,
-    },
-    {
-      name: "Tue",
-      visit: 2000,
-    },
-    {
-      name: "Wed",
-      visit: 2780,
-    },
-    {
-      name: "Thu",
-      visit: 1890,
-    },
-    {
-      name: "Fri",
-      visit: 2390,
-    },
-    {
-      name: "Sat",
-      visit: 3490,
-    },
-  ],
-};
 
 export const userRows = [
   {
@@ -464,7 +376,7 @@ export const products = [
     producer: "Sony",
     price: "$250.99",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 200,
   },
   {
     id: 2,
@@ -474,7 +386,7 @@ export const products = [
     producer: "Dell",
     price: "$499.99",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 0,
   },
   {
     id: 3,
@@ -484,7 +396,7 @@ export const products = [
     producer: "Samsung",
     price: "$999.49",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 11,
   },
   {
     id: 4,
@@ -494,7 +406,7 @@ export const products = [
     producer: "Apple",
     price: "$799.49",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 43,
   },
   {
     id: 5,
@@ -504,6 +416,7 @@ export const products = [
     producer: "Philips",
     price: "$39.99",
     createdAt: "01.02.2023",
+    inStock: 22
   },
   {
     id: 6,
@@ -513,7 +426,7 @@ export const products = [
     producer: "Logitech",
     price: "$59.49",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 34,
   },
   {
     id: 7,
@@ -523,7 +436,7 @@ export const products = [
     producer: "Apple",
     price: "$149.99",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 12,
   },
   {
     id: 8,
@@ -533,7 +446,7 @@ export const products = [
     producer: "Sony",
     price: "$49.99",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 33,
   },
   {
     id: 9,
@@ -543,7 +456,7 @@ export const products = [
     producer: "Microsoft",
     price: "$299.99",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 43,
   },
   {
     id: 10,
@@ -553,6 +466,6 @@ export const products = [
     producer: "Furniture Inc.",
     price: "$299.99",
     createdAt: "01.02.2023",
-    inStock: true,
+    inStock: 23,
   },
 ];

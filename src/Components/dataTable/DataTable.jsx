@@ -22,9 +22,9 @@ const DataTable = (props) => {
       return (
         <div className="action">
           <Link to={`/${props.slug}/${params.row.id}`}>
-            <AiTwotoneEdit />
+            <AiTwotoneEdit width={50} height={50}/>
           </Link>
-          <div className="delete" onClick={() => handleDelete(params.row.id)}>
+          <div className="delete" onClick={handleDelete}>
             <AiFillDelete className="text-red-600"/>
           </div>
         </div>
