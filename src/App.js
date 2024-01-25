@@ -16,6 +16,7 @@ import Orders from "./Pages/Orders";
 import Calendar from "./Pages/Calendar";
 import Faq from "./Pages/Faq";
 import Addproduct from "./Pages/Addproduct";
+import EachProduct from "./Pages/EachProduct";
 
 function App() {
   const router = createBrowserRouter(
@@ -25,6 +26,7 @@ function App() {
         <Route path="*" element={<Page404 />} />
         <Route index element={<Dashboard />} />
         <Route path="products" element={<Products />} />
+        <Route path="product/:id" element={<EachProduct />} />
         <Route path="addproduct" element={<Addproduct />} />
         <Route path="customers" element={<Customers />} />
         <Route path="orders" element={<Orders />} />

@@ -21,7 +21,7 @@ const DataTable = (props) => {
     renderCell: (params) => {
       return (
         <div className="action">
-          <Link to={`/${props.slug}/${params.row.id}`}>
+          <Link to={`/product/${params.row.id}`}>
             <AiTwotoneEdit width={50} height={50}/>
           </Link>
           <div className="delete" onClick={handleDelete}>
@@ -35,14 +35,6 @@ const DataTable = (props) => {
   return (
     <div className="dataTable">
       <DataGrid
-        className="dataGrid"
-        rows={props.rows}
-        columns={[...props.columns, actionColumn]}
-        initialState={{
-          pagination: {
-            pageSize: 10,
-          },
-        }}
         slots={{ toolbar: GridToolbar }}
         slotProps={{
           toolbar: {
@@ -50,7 +42,18 @@ const DataTable = (props) => {
             quickFilterProps: { debounceMs: 500 },
           },
         }}
-        pageSizeOptions={[5]}
+        // components={{
+        //   Toolbar: GridToolbar,
+        // }}
+        // pageSizeOptions={[5]}
+        className="dataGrid"
+        rows={props.rows}
+        columns={[...props.columns, actionColumn]}
+        pageSize={10}
+        rowsPerPageOptions={[5, 10, 20]}
+        components={{
+          Toolbar: GridToolbar,
+        }}
         // checkboxSelection
         disableRowSelectionOnClick
         disableColumnFilter

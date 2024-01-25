@@ -52,7 +52,7 @@ const Addproduct = () => {
       <div className="flex bg-gray-100 overflow-hidden h-screen w-screen flex-row ">
         <Sidebar />
         <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
-          <Headers />
+          <Headers props={true}/>
           <div className="flex items-center p-2">
             <h1 className="uppercase text-3xl text-slate-500">
               Add New Product

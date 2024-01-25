@@ -14,7 +14,7 @@ const Dashboard = () => {
       <div className="flex bg-gray-100 overflow-hidden h-screen w-screen flex-row ">
         <Sidebar />
         <div className="p-4 pt-0 text-2xl font-semibold flex-1 h-screen overflow-y-scroll">
-          <Headers />
+          <Headers props={true}/>
           <div className="flex flex-col gap-4 flex-wrap">
             <Stats />
             <div className="flex flex-row gap-4 w-full flex-wrap ">
