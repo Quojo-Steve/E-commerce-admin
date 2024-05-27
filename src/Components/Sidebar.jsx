@@ -19,9 +19,11 @@ const Sidebar = () => {
   const [dashboard, setDashboard] = useState(false);
   const [item, setItem] = useState(false);
   const [customer, setCustomer] = useState(false);
+  const [review, setReview] = useState(false);
   const [orders, setOrders] = useState(false);
   const [calendar, setCalendar] = useState(false);
   const [faq, setFaq] = useState(false);
+  const [transaction, setTransaction] = useState(false);
 
   const location = useLocation();
 
@@ -32,8 +34,21 @@ const Sidebar = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (location.pathname === "/products") {
+    if (
+      location.pathname === "/products" ||
+      location.pathname.startsWith("/product/") ||
+      location.pathname === "/addproduct"
+    ) {
       setItem(true);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (
+      location.pathname === "/reviews" ||
+      location.pathname.startsWith("/review/")
+    ) {
+      setReview(true);
     }
   }, [location.pathname]);
 
@@ -52,6 +67,12 @@ const Sidebar = () => {
   useEffect(() => {
     if (location.pathname === "/calendar") {
       setCalendar(true);
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/transactions") {
+      setTransaction(true);
     }
   }, [location.pathname]);
 
@@ -155,8 +176,10 @@ const Sidebar = () => {
               </span>
             </Link>
             <Link
-              to={"/"}
+              to={"/transactions"}
               className={`text-gray-800 ${
+                transaction ? "bg-gray-50" : "hover:bg-gray-50"
+              } ${
                 !open ? "flex-col" : "flex-row"
               } font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
@@ -170,8 +193,10 @@ const Sidebar = () => {
               </span>
             </Link>
             <Link
-              to={"/"}
+              to={"/reviews"}
               className={`text-gray-800 ${
+                review ? "bg-gray-50" : "hover:bg-gray-50"
+              } ${
                 !open ? "flex-col" : "flex-row"
               } font-bold text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-50 rounded-md duration-300 mb-2`}
             >
@@ -181,7 +206,7 @@ const Sidebar = () => {
                   !open ? "text-xs" : "text-base"
                 } duration-300 origin-left`}
               >
-                Messages
+                Reviews
               </span>
             </Link>
           </li>

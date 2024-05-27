@@ -1,0 +1,69 @@
+.activities {
+  flex: 1;
+}
+
+.activities h2 {
+  margin-bottom: 20px;
+}
+
+.activities ul {
+  padding: 0;
+}
+
+.activities ul li {
+  list-style-type: none;
+  position: relative;
+  width: 1px;
+  padding-top: 30px;
+  background-color: #f45b69;
+}
+
+.activities ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f84a58;
+  transform: translateX(-50%);
+}
+
+.activities ul li > div {
+  min-width: 500px;
+  padding: 15px;
+  background-color: #f45b6810;
+}
+
+@media (max-width: 768px) {
+  .activities ul li > div {
+    min-width: 250px;
+  }
+}
+
+.activities ul li > div p {
+  margin-bottom: 5px;
+}
+
+.activities ul li > div time {
+  font-size: 12px;
+}
+
+.hr-thick {
+  border: none;
+  height: 2px; /* Adjust the height to make the hr thicker */
+  background-color: #c4bebe; /* Black color */
+}
+
+.chart {
+  margin-top: 50px;
+  width: 95%;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .chart {
+    display: none;
+  }
+}

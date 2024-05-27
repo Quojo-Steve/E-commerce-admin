@@ -375,8 +375,103 @@ export const products = [
     color: "white",
     producer: "Sony",
     price: "$250.99",
+    category: "Technology",
     createdAt: "01.02.2023",
     inStock: 200,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 2,
@@ -385,8 +480,103 @@ export const products = [
     color: "black",
     producer: "Dell",
     price: "$499.99",
+    category: "Technology",
     createdAt: "01.02.2023",
     inStock: 0,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 3,
@@ -395,8 +585,103 @@ export const products = [
     color: "gray",
     producer: "Samsung",
     price: "$999.49",
+    category: "Technology",
     createdAt: "01.02.2023",
     inStock: 11,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 4,
@@ -404,9 +689,104 @@ export const products = [
     title: "Apple Iphone 14 Pro Max",
     color: "white",
     producer: "Apple",
+    category: "Technology",
     price: "$799.49",
     createdAt: "01.02.2023",
     inStock: 43,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 5,
@@ -414,9 +794,104 @@ export const products = [
     title: "Philips Hue Play Gradient",
     color: "rainbow",
     producer: "Philips",
+    category: "Technology",
     price: "$39.99",
     createdAt: "01.02.2023",
-    inStock: 22
+    inStock: 22,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 6,
@@ -424,9 +899,104 @@ export const products = [
     title: "Logitech MX Master 3",
     color: "black",
     producer: "Logitech",
+    category: "Technology",
     price: "$59.49",
     createdAt: "01.02.2023",
     inStock: 34,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 7,
@@ -434,9 +1004,104 @@ export const products = [
     title: "Smart Watch Series 6",
     color: "black",
     producer: "Apple",
+    category: "Accessories",
     price: "$149.99",
     createdAt: "01.02.2023",
     inStock: 12,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 8,
@@ -444,9 +1109,104 @@ export const products = [
     title: "Wireless Earbuds",
     color: "white",
     producer: "Sony",
+    category: "Accessories",
     price: "$49.99",
     createdAt: "01.02.2023",
     inStock: 33,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 9,
@@ -454,9 +1214,104 @@ export const products = [
     title: "Xbox One X",
     color: "black",
     producer: "Microsoft",
+    category: "Games",
     price: "$299.99",
     createdAt: "01.02.2023",
     inStock: 43,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
   {
     id: 10,
@@ -464,8 +1319,103 @@ export const products = [
     title: "Desk and Chair Set",
     color: "brown",
     producer: "Furniture Inc.",
+    category: "Furniture",
     price: "$299.99",
     createdAt: "01.02.2023",
     inStock: 23,
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+    chart: {
+      dataKeys: [
+        { name: "clicks", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Jan",
+          clicks: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Feb",
+          clicks: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Mar",
+          clicks: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Apr",
+          clicks: 2780,
+          orders: 3908,
+        },
+        {
+          name: "May",
+          clicks: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Jun",
+          clicks: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Jul",
+          clicks: 3690,
+          orders: 1300,
+        },
+        {
+          name: "Aug",
+          clicks: 3490,
+          orders: 4350,
+        },
+        {
+          name: "Sep",
+          clicks: 3490,
+          orders: 4200,
+        },
+        {
+          name: "Oct",
+          clicks: 3690,
+          orders: 4300,
+        },
+        {
+          name: "Nov",
+          clicks: 3410,
+          orders: 4300,
+        },
+        {
+          name: "Dec",
+          clicks: 2490,
+          orders: 4300,
+        },
+      ],
+    },
   },
 ];

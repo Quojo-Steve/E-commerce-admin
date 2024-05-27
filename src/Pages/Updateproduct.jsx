@@ -1,10 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../Components/Sidebar";
 import Headers from "../Components/Headers";
 import { IoMdCloudUpload } from "react-icons/io";
 import "./addproducts.css";
+import { useParams } from "react-router-dom";
+import { products } from "../data";
 
-const Addproduct = () => {
+const Updateproduct = () => {
+  const { id } = useParams();
+  const product = products.find((product) => product.id === parseInt(id));
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    if (product) {
+      setSelectedImage(product.img);
+    }
+  }, [product]);
+
   useEffect(() => {
     const selectImage = document.querySelector(".select-image");
     const inputFile = document.querySelector("#file");
@@ -28,7 +40,7 @@ const Addproduct = () => {
           imgArea.appendChild(img);
           imgArea.classList.add("active");
           imgArea.dataset.img = image.name;
-          //   setSelectedImage(image);
+          setSelectedImage(image);
         };
         reader.readAsDataURL(image);
       } else {
@@ -53,7 +65,7 @@ const Addproduct = () => {
           <Headers props={true} />
           <div className="flex items-center p-2">
             <h1 className="uppercase text-3xl text-slate-500">
-              Add New Product
+              Update Product
             </h1>
           </div>
 
@@ -62,11 +74,17 @@ const Addproduct = () => {
               <input type="file" id="file" accept="image/*" hidden />
               <div className="flex items-center justify-center">
                 <div className="img-area" data-img="">
-                  <IoMdCloudUpload className="icon" color="grey" />
-                  <h3>Upload Image</h3>
-                  <p>
-                    Image size must be less than <span>2MB</span>
-                  </p>
+                  {selectedImage ? (
+                    <img src={selectedImage} alt="product" />
+                  ) : (
+                    <>
+                      <IoMdCloudUpload className="icon" color="grey" />
+                      <h3>Upload Image</h3>
+                      <p>
+                        Image size must be less than <span>2MB</span>
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -78,31 +96,38 @@ const Addproduct = () => {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
-                />
-                <input
-                  type="number"
-                  placeholder="Price"
+                  value={product.title}
                   className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
                 />
                 <input
                   type="text"
+                  placeholder="Price"
+                  value={product.price}
+                  className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
+                />
+
+                <input
+                  type="text"
                   placeholder="Category"
+                  value={product.category}
                   className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
                 />
                 <input
                   type="number"
                   placeholder="In Stock"
+                  value={product.inStock}
                   className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
                 />
                 <input
                   type="text"
                   placeholder="Producer"
+                  value={product.producer}
                   className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
                 />
                 <input
                   type="text"
                   placeholder="Color"
+                  value={product.color}
                   className="border-b-2 border-b-solid border-b-gray-400 focus:border-b-black w-full outline-none p-2 mb-5 bg-gray-100 font-normal"
                 />
                 <button className="select-image w-full bg-green-300 hover:bg-green-500">
@@ -117,4 +142,4 @@ const Addproduct = () => {
   );
 };
 
-export default Addproduct;
+export default Updateproduct;

@@ -52,6 +52,11 @@ const Products = () => {
               >
                 Add Product
               </Link>
+              <Link to={"/"}
+                className="bg-green-300 p-1 px-4 hover:bg-green-200 text-black duration-150 rounded ml-4 font-medium text-sm"
+              >
+                Manage Categories
+              </Link>
             </div>
             <DataTable slug="products" columns={columns} rows={products} />
           </div>
